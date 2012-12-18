@@ -5,12 +5,12 @@ It comes in three flavors:
 
 * [WebNoteAOP](https://github.com/JohannesHoppe/WebNoteAOP) – **AOP** (Aspect Oriented Programming) with the PostSharp framework
 * [WebNoteNoSQL](https://github.com/JohannesHoppe/WebNoteNoSQL) – **NoSQL** databases vs SQL (MS SQL, Redis, MongoDB and RavenDB)
-* [WebNoteSinglePage](https://github.com/JohannesHoppe/WebNoteSinglePage) – **JavaScript** best practices for creating a Single Page Application (jQuery, RequireJS, KnockoutJS)
+* [WebNoteSinglePage](https://github.com/JohannesHoppe/WebNoteSinglePage) – **JavaScript** best practices for a Single Page Application (jQuery, RequireJS, KnockoutJS)
 
 
 ![WebNoteSinglePage](https://raw.github.com/JohannesHoppe/WebNoteSinglePage/master/WebNoteSinglePage.png)
 
-WebNoteSinglePage is sample project that demonstrates best practices for creating a Single Page Application with the ASP.NET MVC framework.  
+WebNoteSinglePage is sample project that demonstrates best practices for a Single Page Application with the ASP.NET MVC framework.  
 It includes many modern frameworks and tools:
 
 * [jQuery](http://jquery.com/)
