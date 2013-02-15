@@ -3,7 +3,7 @@
 @Html.Partial("~/Views/AppViews/details.cshtml")
 
 @section scripts  {
-    require(['SinglePage/appState', 'knockout.bindings'], function(appState) {
+    require(['singlePage/appState', 'knockout.bindings'], function(appState) {
         appState.init();
     });
 }
