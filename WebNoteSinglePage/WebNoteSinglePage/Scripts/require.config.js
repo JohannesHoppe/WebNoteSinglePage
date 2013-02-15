@@ -5,8 +5,8 @@
     enforceDefine: true,
     baseUrl: "Scripts",
     paths: {
-        'jquery': 'jquery-1.8.3',
-        'knockout': 'knockout-2.2.0',
+        'jquery': 'jquery-1.9.1',
+        'knockout': 'knockout-2.2.1',
         'knockout.mapping': 'knockout.mapping-latest',
         'cufon': 'cufon-yui',
         'buxtonSketch': 'fonts/Buxton_Sketch_400.font',

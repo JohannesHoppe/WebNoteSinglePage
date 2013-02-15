@@ -3,7 +3,7 @@
   <PropertyGroup>
     <SignAssembly>false</SignAssembly>
     <TargetFrameworkProfile />
-    <JSLintSkip>\Scripts\cufon-yui.js|\Scripts\fonts\Buxton_Sketch_400.font.js|\Scripts\fonts\Segoe_Marker_400.font.js|\Scripts\fonts\SketchFlow_Print_400.font.js|\Scripts\history.js-modified\history.adapter.jquery.js|\Scripts\history.js-modified\history.html4.js|\Scripts\history.js-modified\history.js|\Scripts\jquery-1.8.3.js|\Scripts\jquery.validate.js|\Scripts\jquery.validate-vsdoc.js|\Scripts\jquery.validate.min.js|\Scripts\knockout-2.2.0.js|\Scripts\knockout-2.2.0.debug.js|\Scripts\knockout.mapping-latest.js|\Scripts\knockout.mapping-latest.debug.js|\Scripts\MicrosoftMvcValidation.debug.js|\Scripts\MicrosoftMvcValidation.js|\Scripts\date.js|\Scripts\json2.js|\Scripts\jquery.serializeObject.js|\Scripts\sammy-0.7.4.js|\Scripts\sammy-0.7.4.min.js</JSLintSkip>
+    <JSLintSkip>\Scripts\cufon-yui.js|\Scripts\fonts\Buxton_Sketch_400.font.js|\Scripts\fonts\Segoe_Marker_400.font.js|\Scripts\fonts\SketchFlow_Print_400.font.js|\Scripts\history.js-modified\history.adapter.jquery.js|\Scripts\history.js-modified\history.html4.js|\Scripts\history.js-modified\history.js|\Scripts\jquery-1.8.3.js|\Scripts\jquery.validate.js|\Scripts\jquery.validate-vsdoc.js|\Scripts\jquery.validate.min.js|\Scripts\knockout-2.2.0.js|\Scripts\knockout-2.2.0.debug.js|\Scripts\knockout.mapping-latest.js|\Scripts\knockout.mapping-latest.debug.js|\Scripts\MicrosoftMvcValidation.debug.js|\Scripts\MicrosoftMvcValidation.js|\Scripts\date.js|\Scripts\json2.js|\Scripts\jquery.serializeObject.js|\Scripts\sammy-0.7.4.js|\Scripts\sammy-0.7.4.min.js|\Scripts\jquery-1.9.1.js|\Scripts\jquery-1.9.1.intellisense.js|\Scripts\jquery-1.9.1.min.js|\Scripts\knockout-2.2.1.js|\Scripts\knockout-2.2.1.debug.js</JSLintSkip>
     <IISExpressSSLPort />
     <IISExpressAnonymousAuthentication />
     <IISExpressWindowsAuthentication />
@@ -182,21 +182,42 @@
     <Compile Include="Models\NoteWithCategories.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Content Include="Scripts\date.js" />
+    <None Include="Scripts\jquery-1.9.1.intellisense.js">
+      <DependentUpon>jquery-1.9.1.js</DependentUpon>
+    </None>
+    <Content Include="Scripts\jquery-1.9.1.js" />
+    <Content Include="Scripts\jquery-1.9.1.min.js">
+      <DependentUpon>jquery-1.9.1.js</DependentUpon>
+    </Content>
     <Content Include="Scripts\jquery.serializeObject.js" />
     <Content Include="Scripts\json2.js" />
+    <Content Include="Scripts\knockout-2.2.1.debug.js">
+      <DependentUpon>knockout-2.2.1.js</DependentUpon>
+    </Content>
+    <Content Include="Scripts\knockout-2.2.1.js" />
     <Content Include="Scripts\knockout.bindings.js" />
+    <Content Include="Scripts\knockout.mapping-latest.debug.js">
+      <DependentUpon>knockout.mapping-latest.js</DependentUpon>
+    </Content>
+    <Content Include="Scripts\knockout.mapping-latest.js" />
+    <Content Include="Scripts\r.js">
+      <DependentUpon>require.js</DependentUpon>
+    </Content>
+    <Content Include="Scripts\require.config.js">
+      <DependentUpon>require.js</DependentUpon>
+    </Content>
+    <Content Include="Scripts\require.js" />
     <Content Include="Scripts\sammy-0.7.4.js" />
     <Content Include="Scripts\sammy-0.7.4.min.js">
       <DependentUpon>sammy-0.7.4.js</DependentUpon>
     </Content>
-    <Content Include="Scripts\sammy.push_location_proxy-0.7.4.min.js">
-      <DependentUpon>sammy.push_location_proxy-0.7.4.js</DependentUpon>
-    </Content>
-    <Content Include="Scripts\sammy.push_location_proxy-0.7.4.js" />
     <Content Include="Scripts\singlePage\ViewModels\Page404ViewModel.js" />
     <Content Include="Scripts\singlePage\ViewModels\CreateViewModel.js" />
     <Content Include="Scripts\singlePage\bindRefreshView.js" />
     <Content Include="Scripts\singlePage\bindLoadingIndicator.js" />
+    <Content Include="Scripts\jquery-1.9.1.min.map">
+      <DependentUpon>jquery-1.9.1.js</DependentUpon>
+    </Content>
   </ItemGroup>
   <ItemGroup>
     <Content Include="Content\images\ajax-loader.gif" />
@@ -212,31 +233,9 @@
     <Content Include="Scripts\fonts\Buxton_Sketch_400.font.js" />
     <Content Include="Scripts\fonts\Segoe_Marker_400.font.js" />
     <Content Include="Scripts\fonts\SketchFlow_Print_400.font.js" />
-    <Content Include="Scripts\jquery-1.8.3-vsdoc.js">
-      <DependentUpon>jquery-1.8.3.js</DependentUpon>
-    </Content>
-    <Content Include="Scripts\jquery-1.8.3.js" />
-    <Content Include="Scripts\jquery-1.8.3.min.js">
-      <DependentUpon>jquery-1.8.3.js</DependentUpon>
-    </Content>
     <Content Include="Scripts\jquery.loadingIndicator.js" />
-    <Content Include="Scripts\knockout-2.2.0.debug.js">
-      <DependentUpon>knockout-2.2.0.js</DependentUpon>
-    </Content>
-    <Content Include="Scripts\knockout-2.2.0.js" />
     <None Include="App_Data\Categories.json" />
     <None Include="App_Data\Notes.json" />
-    <Content Include="Scripts\knockout.mapping-latest.debug.js">
-      <DependentUpon>knockout.mapping-latest.js</DependentUpon>
-    </Content>
-    <Content Include="Scripts\knockout.mapping-latest.js" />
-    <Content Include="Scripts\r.js">
-      <DependentUpon>require.js</DependentUpon>
-    </Content>
-    <Content Include="Scripts\require.config.js">
-      <DependentUpon>require.js</DependentUpon>
-    </Content>
-    <Content Include="Scripts\require.js" />
     <Content Include="Scripts\singlePage\app.js" />
     <Content Include="Scripts\singlePage\appState.js" />
     <Content Include="Scripts\singlePage\ViewModels\DetailsViewModel.js" />

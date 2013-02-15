@@ -30,8 +30,6 @@
         }).run('#/');
     };
 
-    // Sammy intercepts normal links and nothing has to be done
-    // but our mechanism is not catched by this mechanism
     var changeState = function (newViewId, newParam) {
 
         var newLocation = !newParam ? "#" + newViewId : "#" + newViewId + "/" + newParam;
