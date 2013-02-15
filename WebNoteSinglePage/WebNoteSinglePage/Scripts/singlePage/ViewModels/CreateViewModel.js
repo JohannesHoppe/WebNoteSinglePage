@@ -3,7 +3,7 @@
         'singlePage/appState',
         'jquery.serializeObject'], function ($, mapping, appState) {
 
-        var loadModel = function (activeParam, callback) {
+        var loadModel = function (param, callback) {
 
         var model = {};
 

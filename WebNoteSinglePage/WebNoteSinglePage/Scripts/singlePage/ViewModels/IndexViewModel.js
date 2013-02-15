@@ -2,7 +2,7 @@
         'knockout.mapping',
         'singlePage/appState'], function ($, mapping, appState) {
 
-    var loadModel = function (activeParam, callback) {
+    var loadModel = function (param, callback) {
 
         $.ajax('api/notes').done(function (xhr) {
 
