@@ -16,6 +16,11 @@
         });
 
         app.$events.bind('viewLoaded', function () {
+
+            if (!$main.data('loadingIndicator')) {
+                return;
+            }
+
             $main.data('loadingIndicator').hide();
         });
     };

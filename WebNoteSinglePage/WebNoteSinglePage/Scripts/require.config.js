@@ -10,11 +10,7 @@
         'knockout.mapping': 'knockout.mapping-latest',
         'cufon': 'cufon-yui',
         'buxtonSketch': 'fonts/Buxton_Sketch_400.font',
-
-        'jquery.history': 'history.js-modified/jquery.history.bundle',
-        'history.adapter': 'history.js-modified/history.adapter.jquery',
-        'history.html4': 'history.js-modified/history.html4',
-        'history': 'history.js-modified/history',
+        'sammy': 'sammy-0.7.4',
         'datejs': 'date'
     },
     shim: {
@@ -22,12 +18,8 @@
         'knockout': { deps: ['jquery', 'json2'] },
         'cufon': { exports: 'Cufon' },
         'buxtonSketch': { deps: ['cufon'], exports: 'Cufon' },
+        'sammy': { deps: ['jquery'] },
         'datejs': { exports: 'Date.CultureInfo' },
-        
-        'history.adapter': { deps: ['jquery', 'history.html4'], exports: 'History.Adapter' },
-        'history.html4': { deps: ['jquery', 'history'], exports: 'History.initHtml4' },
-        'history': { deps: ['jquery'], exports: 'History' },
-
         'json2': { exports: 'JSON.stringify' }
     }
 });

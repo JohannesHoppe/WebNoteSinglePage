@@ -1,39 +1,45 @@
 ﻿define(['singlePage/app',
         'jquery',
-        'jquery.history',
-        'singlePage/urlParser',
+        'sammy',
         'singlePage/bindLoadingIndicator',
-        'singlePage/bindRefreshView'], function (app, $, historyJs, urlParser) {
+        'singlePage/bindRefreshView'], function (app, $, sammy) {
+
+    var sammyApp;
 
     var init = function() {
 
-        $(function() {
-            handleChangedState();
-        });
+        // Client-side routes    
+        sammyApp = sammy(function () {
 
-        $(window).bind("statechange", function(e) {
-            handleChangedState();
-        });
+            this.get('#/', function () {
+                app.loadView('index');
+            });
+
+            this.get('#:viewId', function () {
+                app.loadView(this.params.viewId);
+            });
+
+            this.get('#:viewId/:param', function () {
+                app.loadView(this.params.viewId, this.params.param);
+            });
+
+            this.notFound = function() {
+                app.loadView('page404');
+            };
+
+        }).run('#/');
     };
 
-    // newParam is optional
+    // Sammy intercepts normal links and nothing has to be done
+    // but our mechanism is not catched by this mechanism
     var changeState = function (newViewId, newParam) {
 
-        var newUrl = urlParser.buildQuerystring(newViewId, newParam);
-        historyJs.pushState(null, window.document.title, newUrl);
-        app.loadView(newViewId, newParam);
+        var newLocation = !newParam ? "#" + newViewId : "#" + newViewId + "/" + newParam;
+        sammyApp.setLocation(newLocation);
     };
-
-    var handleChangedState = function () {
-
-        var state = historyJs.getState();
-        var fragments = urlParser.parseQuerystring(state.url);
-        app.loadView(fragments.viewId, fragments.param);
-    };
-
-    var reload = function () {
-        // temporary workaround, since handleChangedState(); is buggy here! :-(
-        window.location.reload();
+            
+    var reload = function() {
+        sammyApp.refresh();
     };
 
     return {

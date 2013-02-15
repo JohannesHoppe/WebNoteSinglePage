@@ -1,9 +1,10 @@
 ﻿@Html.Partial("~/Views/AppViews/index.cshtml")
 @Html.Partial("~/Views/AppViews/create.cshtml")
 @Html.Partial("~/Views/AppViews/details.cshtml")
+@Html.Partial("~/Views/AppViews/page404.cshtml")
 
 @section scripts  {
-    require(['SinglePage/appState', 'knockout.bindings'], function(appState) {
+    require(['singlePage/appState', 'knockout.bindings'], function(appState) {
         appState.init();
     });
 }

@@ -29,7 +29,7 @@ function ($, ko) {
     var unloadCurrentView = function() {
 
         if ($currentView) {
-            $currentView.fadeOut('fast');
+            $currentView.hide();
 
             ko.cleanNode($currentView.get(0));
             $currentView.unbind();
