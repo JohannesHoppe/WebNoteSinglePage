@@ -1,4 +1,4 @@
-﻿define(['jquery',
+define(['jquery',
         'singlePage/app',
         'jquery.loadingIndicator'], function ($, app) {
 
